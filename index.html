@@ -1,1 +1,68 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlie Kilpatrick | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero home-hero">
+      <div class="hero-content">
+        <div class="profile-photo-wrap">
+          <img
+            src="https://ciera.northwestern.edu/wp-content/uploads/2024/10/D4S_0674-e1729194115551-360x360.jpg"
+            alt="Charlie Kilpatrick"
+            class="profile-photo"
+            width="360"
+            height="360"
+          />
+        </div>
+        <h1 class="name">Charlie Kilpatrick</h1>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2 class="section-label">Contact</h2>
+      <p class="contact-name">Charlie Kilpatrick</p>
+      <p class="contact-org">Northwestern University<br>Center for Interdisciplinary Exploration and Research in Astrophysics (CIERA)</p>
+      <p class="contact-details">
+        <strong>Address:</strong> 1800 Sherman Ave, Room 8049, Evanston, IL 60201<br>
+        <strong>Email:</strong> <a href="mailto:ckilpatrick@northwestern.edu">ckilpatrick@northwestern.edu</a>
+      </p>
+    </section>
+
+    <section class="bio">
+      <p>I’m a research assistant professor at <a href="https://ciera.northwestern.edu/">CIERA</a> at Northwestern, where I work on the lives and deaths of massive stars—their variability, mass loss, explosions, and compact remnants. I run optical and infrared time-domain programs with telescopes in Arizona, Hawaii, and Chile to find and follow these events in the local Universe.</p>
+      <p>I’m interested in supernovae and their progenitors, gravitational wave astronomy, and fast radio bursts. I’m a co-investigator on the <a href="https://yse.ucsc.edu/">Young Supernova Experiment</a> and do follow-up imaging and spectroscopy of transients across the spectrum. I was a CIERA postdoc from 2020–2023 and joined the faculty in 2023.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://ui.adsabs.harvard.edu/user/libraries/I9ginI2ARcazB7mhzTuQvg" target="_blank" rel="noopener">ADS</a>
+      <a href="https://scholar.google.com/citations?user=bjoss6QAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://github.com/charliekilpatrick" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://ciera.northwestern.edu/directory/charlie-kilpatrick/">CIERA profile</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Charlie Kilpatrick</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

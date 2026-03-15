@@ -1,0 +1,272 @@
+/* Charlie Kilpatrick — Academic site */
+
+:root {
+  --bg: #faf9f7;
+  --text: #1a1a1a;
+  --text-muted: #4a4a4a;
+  --accent: #2c5282;
+  --accent-hover: #1a365d;
+  --border: #e2e0db;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background: rgba(250, 249, 247, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Main content */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+}
+
+/* Hero */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.home-hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.profile-photo-wrap {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.home-hero .name {
+  margin: 0;
+}
+
+.name {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+.page-title .name {
+  margin-bottom: 0;
+}
+
+.page-title {
+  padding: 1rem 0 2rem;
+}
+
+/* Section common */
+section {
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+/* Contact */
+.contact-name {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.contact-org {
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-details {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Bio */
+.bio p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Research */
+.research p {
+  margin: 0 0 1rem;
+}
+
+.research-topics {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.research-topics li {
+  margin-bottom: 0.35rem;
+}
+
+/* Publications */
+.publications-intro {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* CV */
+.cv p {
+  margin: 0;
+}
+
+.cv-link {
+  font-weight: 500;
+}
+
+/* Site nav */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nav-group h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.nav-group a {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+
+  main {
+    padding-top: 5rem;
+  }
+
+  .hero {
+    min-height: 40vh;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+}
