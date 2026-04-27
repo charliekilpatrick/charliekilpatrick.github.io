@@ -129,6 +129,7 @@ main {
 
 .page-title {
   padding: 1rem 0 2rem;
+  text-align: center;
 }
 
 /* Section common */
@@ -193,12 +194,6 @@ section {
 /* Research page (full content) */
 main.research-page {
   max-width: 800px;
-}
-
-.research-source-note {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin: 0.5rem 0 0;
 }
 
 .research-section {
@@ -301,12 +296,51 @@ main.research-page {
 }
 
 /* CV */
+main.cv-page {
+  max-width: 960px;
+}
+
 .cv p {
   margin: 0;
 }
 
+.cv-viewer-wrap {
+  margin: 0 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  background: #e8e6e3;
+}
+
+.cv-viewer {
+  display: block;
+  width: 100%;
+  height: min(85vh, 1100px);
+  min-height: 480px;
+  border: 0;
+}
+
+.cv-download {
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.cv-viewer-fallback {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 .cv-link {
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .cv-viewer {
+    min-height: 60vh;
+    height: 70vh;
+  }
 }
 
 /* Site nav */
